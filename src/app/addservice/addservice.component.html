@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+    <div class="panel-heading main-color-bg">
+      <h3 class="panel-title">Thêm Dịch Vụ</h3>
+    </div>
+    <div class="panel-body">
+      <form>
+          <div class="form-group">
+              <label>MaDV</label>
+              <input type="text" class="form-control" placeholder="MaDV" #madv>
+            </div>
+        <div class="form-group">
+          <label>Tên Dich Vụ</label>
+          <input type="text" class="form-control" placeholder="ten dich vu" #tendichvu>
+        </div>
+    
+        <div class="form-group">
+          <label >Diện Tích</label>
+          <input type="number" class="form-control" #dientich>
+        </div>
+        <div class="form-group">
+          <label>Số Tầng</label>
+          <input type="number" class="form-control" placeholder="so tang" #sotang>
+        </div>
+        <div class="form-group">
+            <label>Số Người Tối Đa</label>
+            <input type="number" class="form-control" placeholder="so nguoi toi da" #songuoitoida>
+          </div>
+          <div class="form-group">
+            <label>Trạng Thái</label>
+            <input type="text" class="form-control" placeholder="trang thai" #trangthai>
+          </div>
+          <div class="form-group">
+            <label>Gía Thuê</label>
+            <input type="number" class="form-control" placeholder="gia thue" #giathue>
+          </div>
+          <div class="form-group">
+            <label>Id_Type</label>
+            <input type="number" class="form-control" placeholder="id loai dich vu" #idtype>
+          </div>
+        
+        <button (click)="onadd(madv.value,tendichvu.value, dientich.value, sotang.value,
+        songuoitoida.value, trangthai.value, giathue.value, idtype.value);madv.value='';
+        tendichvu.value=''; dientich.value='';sotang.value='';songuoitoida.value='';
+        trangthai.value='';giathue.value='';idtype.value=''">submit</button>
+        <button (click)="goBack()">goBack</button>
+      </form>
+    </div>
+    </div>

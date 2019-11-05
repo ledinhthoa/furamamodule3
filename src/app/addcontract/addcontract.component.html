@@ -1,0 +1,52 @@
+<div class="panel panel-default">
+    <div class="panel-heading main-color-bg">
+      <h3 class="panel-title">Thêm Hợp Đồng</h3>
+    </div>
+    <div class="panel-body">
+      <form>
+        <div class="form-group">
+          <label>id_customer</label>
+          <input type="text" class="form-control" placeholder="id_customer" #id_customer>
+        </div>
+        <div class="form-group">
+          <label>MaHD</label>
+          <input type="text" class="form-control" placeholder="Mahd" #mahd>
+        </div>
+        <div class="form-group">
+            <label>Ngày Bất Đầu</label>
+            <ejs-datepicker  placeholder='Select a date' #ngaybatdau [value]='dateValue' ></ejs-datepicker>
+  
+        </div>
+        <div class="form-group">
+            <label>Ngày Kết Thúc</label>
+            <ejs-datepicker  placeholder='Select a date' #ngayketthuc [value]='dateValue' ></ejs-datepicker>
+  
+        </div>
+
+        <div class="form-group">
+          <label >Tiền Đặt Cọc</label>
+          <input type="number" class="form-control" #tiendatcoc>
+        </div>
+    
+        <div class="form-group">
+          <label>Tổng Tiền</label>
+          <input type="number" class="form-control" placeholder="tongtien" #tongtien>
+        </div>
+        <div class="form-group">
+            <label>Hình Thức Thanh Toán</label>
+            <input type="text" class="form-control" placeholder="hinh thuc thanh toan" #hinhthucthanhtoan>
+          </div>
+          <div class="form-group">
+            <label>Ghi Chú</label>
+            <input type="text" class="form-control" placeholder="ghi chu" #ghichu>
+          </div>
+          
+        <button (click)="onadd(mahd.value,id_customer.value, ngaybatdau.value, ngayketthuc.value,
+        tiendatcoc.value, tongtien.value, hinhthucthanhtoan.value, ghichu.value);
+       mahd.value=''; id_customer.value='';ngaybatdau.value='';ngayketthuc.value='';
+        tiendatcoc.value='';tongtien.value='';hinhthucthanhtoan.value='';ghichu.value=''
+        ">submit</button>
+        <button (click)="goBack()">goBack</button>
+      </form>
+    </div>
+    </div>

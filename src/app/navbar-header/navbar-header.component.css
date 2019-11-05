@@ -1,0 +1,22 @@
+.navbar{
+    min-height: 50px !important;
+  
+    margin: 0px;
+  }
+ 
+  #header{
+    background:#333333;
+    color:#ffffff;
+    padding-bottom: 30px;
+   margin: 0px;
+  }
+  
+  #header .create{
+    padding-top: 20px;
+   border: gold;
+   margin: 0px;
+  }
+  
+  /* Breadcrumb */
+  
+  

@@ -1,0 +1,42 @@
+<div class="panel panel-default">
+  <div class="panel-heading main-color-bg">
+    <h3 class="panel-title">Thêm Khách Hàng</h3>
+  </div>
+  <div class="panel-body">
+    <form >
+      <div class="form-group">
+        <label>Họ Tên</label>
+        <input type="text" class="form-control" placeholder="Họ Tên" 
+        #hoten required >
+       
+        
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlSelect1">Giới Tính</label>
+          <select class="form-control" name="gioitinh" #gioitinh >
+    
+            <option value="Nữ">Nữ</option> 
+           <option value="Nam">Nam</option> 
+            
+          </select>
+        </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" #email>
+      </div>
+      <div class="form-group">
+          <label>Ngày Sinh</label>
+          <ejs-datepicker  placeholder='Select a date' #ngaysinh [value]='dateValue' [min]='minDate' [max]='maxDate'></ejs-datepicker>
+
+      </div>
+      <div class="form-group">
+        <label>Địa Chỉ</label>
+        <input type="text" class="form-control" placeholder="địa chỉ" #diachi>
+      </div>
+      
+      <button (click)="onadd(hoten.value,gioitinh.value,email.value,ngaysinh.value,diachi.value);
+      hoten.value='';gioitinh.value='';email.value='';ngaysinh.value='';diachi.value=''">submit</button>
+      <button (click)="goBack()">goBack</button>
+    </form>
+  </div>
+  </div>

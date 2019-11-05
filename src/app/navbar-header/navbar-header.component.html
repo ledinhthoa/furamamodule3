@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-xl navbar-light" style="background: #e74c3c;">
+    <a class="navbar-brand" href="#" style="padding-left:10%;font-size: 30px;">AdminStrap</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentXL" aria-controls="navbarSupportedContentXL" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse" id="navbarSupportedContentXL">
+        <ul class="navbar-nav mr-auto text-success">
+            <li class="nav-item active">
+                <a class="nav-link"routerLink="/containerright">Khách Hàng <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/employees">Nhân Viên<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Dịch Vụ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Hợp Đồng <span class="sr-only">(current)</span></a>
+          </li>
+            
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Welcome, Brad</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <h1><span class="glyphicon glyphicon-cog" aria-hidden="true">
+
+          </span> KháchHàng<small style="color: darkgray;">QuảnlýKháchHàng</small></h1>
+        </div>
+        <div class="col-md-2">
+          <div class="dropdown create">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Quản Lí Thêm
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" routerLink="/addcustomer" >Thêm Khách Hàng</a>
+                <a class="dropdown-item" routerLink="/addemployeer">Thêm Nhân Viên</a>
+                <a class="dropdown-item" routerLink="/addservice">Thêm Dịch Vụ</a>
+                <a class="dropdown-item" routerLink="/addcontract">Thêm Hợp Đồng</a>
+                
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

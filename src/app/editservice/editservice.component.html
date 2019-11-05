@@ -1,0 +1,68 @@
+<div class="panel panel-default">
+    <div class="panel-heading main-color-bg">
+      <h3 class="panel-title">Sửa Dịch Vụ</h3>
+    </div>
+    <div class="panel-body">
+      <form>
+          <div class="form-group">
+              <label>MaDV</label>
+              <input type="text" class="form-control" placeholder="MaDV"
+               name="madv" [(ngModel)]="manage.madv" value="{{manage.madv}}" #dichvu="ngModel"
+               pattern='([DV]*[0-9]){4}'>
+             
+               <div [hidden]="dichvu.valid || dichvu.pristine" class="alert alert-danger">
+                không đúng định dạng dịch vụ
+               </div>
+            </div>
+          
+        <div class="form-group">
+          <label>Tên Dịch Vụ</label>
+          <input type="text" class="form-control" placeholder="ten dich vu"
+           name="hoten" [(ngModel)]="manage.tendichvu" value="{{manage.tendichvu}}">
+        </div>
+   
+        <div class="form-group">
+          <label >Diện Tích</label>
+          <input type="number" class="form-control" placeholder="diện tích"
+           name="dientich" [(ngModel)]="manage.dientich" value="{{manage.dientich}}"
+           #dientich="ngModel" pattern="([^-][0-9]{8})">
+           <div [hidden]="dientich.valid || dientich.pristine" class="alert alert-danger">
+             diện tích phải la số nguyên dương
+             </div>
+        </div>
+    
+        <div class="form-group">
+          <label>Số Tầng</label>
+          <input type="number" class="form-control" placeholder="số tầng"
+           name="sotang" [(ngModel)]="manage.sotang" value="{{manage.sotang}}"
+           #sotang="ngModel"pattern="/[^-]">
+           <div [hidden]="sotang.valid || sotang.pristine" class="alert alert-danger">
+              số tầng  phải la số nguyên dương
+              </div>
+        </div>
+        <div class="form-group">
+            <label>Số Người Tối Đa</label>
+            <input type="number" class="form-control" placeholder="số người tối đa" 
+            name="songuoitoida" [(ngModel)]="manage.songuoitoida" value="{{manage.songuoitoida}}"
+            #songuoitoida="ngModel"pattern="/[^-]$/">
+            <div [hidden]="songuoitoida.valid || songuoitoida.pristine" class="alert alert-danger">
+                số người phải la số nguyên dương
+                </div>
+          </div>
+          <div class="form-group">
+            <label>Trạng Thái</label>
+            <input type="text" class="form-control" placeholder="trang thai" 
+            name="trangthai" [(ngModel)]="manage.trangthai" value="{{mmanage.trangthai}}">
+          </div>
+          <div class="form-group">
+            <label>Gía Thuê</label>
+            <input type="number" class="form-control" placeholder="gia thue" 
+            name="giathue" [(ngModel)]="manage.giathue" value="{{manage.giathue}}">
+          </div>
+        
+        <button (click)="save()">submit</button>
+        <button (click)="goBack()">goBack</button>
+       
+      </form>
+    </div>
+    </div>
